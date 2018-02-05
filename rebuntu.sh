@@ -1,11 +1,18 @@
 #or you can chooose sublime text2
-sudo add-apt-repository ppa:webupd8team/sublime-text-2 
+sudo add-apt-repository ppa:webupd8team/sublime-text-2 -y
 sudo apt-get update  
-sudo apt-get install sublime-text-dev  -y
+sudo apt-get install sublime-text  -y
+
+#sougou input
+sudo add-apt-repository ppa:fcitx-team/nightly -y
+sudo apt-get update
+sudo apt-get install fcitx
+wget https://pinyin.sogou.com/linux/download.php?f=linux&bit=64
+sudo dpkg -i sogoupinyin_2.2.0.0102_amd64.deb
 
 # install google chrome browser
-sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.list.d/
-wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
+sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.list.d/ 
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -   
 sudo apt-get update
 sudo apt-get install google-chrome-stable -y
 # install chrome flash player refer to https://jingyan.baidu.com/article/a3761b2bcc457a1576f9aaed.html
@@ -14,7 +21,7 @@ sudo apt-get install google-chrome-stable -y
 sudo apt-get install python-pip -y
 
 # install shadowsocks-qt5
-sudo add-apt-repository ppa:hzwhuang/ss-qt5
+sudo add-apt-repository ppa:hzwhuang/ss-qt5 -y
 sudo apt-get update
 sudo apt-get install shadowsocks-qt5 -y
 
@@ -34,7 +41,7 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 sudo apt-get update
 # base
-sudo apt-get install ros-kinetic-ros-base -y
+sudo apt-get install ros-kinetic-desktop-full -y
 # desktop full 
 # sudo apt-get install ros-kinetic-desktop-full
 # desktop 
@@ -43,20 +50,17 @@ sudo apt-get install ros-kinetic-ros-base -y
 sudo rosdep init
 rosdep update
 
-# install xbot 
-git clone https://github.com/yowlings/xbot.git
-# dependency
-sudo apt-get install ros-kinetic-ecl -y
-sudo apt-get install ros-kinetic-tf -y
-sudo apt-get install ros-kinetic-angles -y
-
+sudo apt-get install ros-kinetic-controller-manager -y
+sudo apt-get install ros-kinetic-yocs-controllers -y
+udo apt-get install ros-kinetic-move-base-msgs -y
+# for xbot sound player
+sudo apt-get install libalsa-ocaml-dev
 # install qt ros
 # http://blog.csdn.net/u013453604/article/details/52186375#t12
-sudo add-apt-repository ppa:levi-armstrong/qt-libraries-xenial  
-sudo add-apt-repository ppa:levi-armstrong/ppa  
-sudo apt-get update 
-sudo apt-get install qt57creator-plugin-ros -y
-
+sudo add-apt-repository ppa:levi-armstrong/qt-libraries-xenial 
+sudo add-apt-repository ppa:levi-armstrong/ppa 
+sudo apt update && sudo apt install qt57creator 
+sudo apt install qt57creator-plugin-ros
 #install latex
 sudo apt-get install texlive-full -y
 
