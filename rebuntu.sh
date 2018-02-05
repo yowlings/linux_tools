@@ -6,7 +6,7 @@ sudo apt-get install sublime-text  -y
 #sougou input
 sudo add-apt-repository ppa:fcitx-team/nightly -y
 sudo apt-get update
-sudo apt-get install fcitx
+sudo apt-get install fcitx -y
 wget https://pinyin.sogou.com/linux/download.php?f=linux&bit=64
 sudo dpkg -i sogoupinyin_2.2.0.0102_amd64.deb
 
@@ -54,13 +54,13 @@ sudo apt-get install ros-kinetic-controller-manager -y
 sudo apt-get install ros-kinetic-yocs-controllers -y
 udo apt-get install ros-kinetic-move-base-msgs -y
 # for xbot sound player
-sudo apt-get install libalsa-ocaml-dev
+sudo apt-get install libalsa-ocaml-dev -y
 # install qt ros
 # http://blog.csdn.net/u013453604/article/details/52186375#t12
-sudo add-apt-repository ppa:levi-armstrong/qt-libraries-xenial 
-sudo add-apt-repository ppa:levi-armstrong/ppa 
-sudo apt update && sudo apt install qt57creator 
-sudo apt install qt57creator-plugin-ros
+sudo add-apt-repository ppa:levi-armstrong/qt-libraries-xenial -y
+sudo add-apt-repository ppa:levi-armstrong/ppa -y
+sudo apt update && sudo apt install qt57creator -y
+sudo apt install qt57creator-plugin-ros -y
 #install latex
 sudo apt-get install texlive-full -y
 
